@@ -1,15 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import AppNav from "./Nav";
 export default class App extends React.Component {
   render() {
     return ( 
       <View style={{flex:1}}>
-         <Ionicons style={{marginLeft:10,marginTop:40}} name="md-menu" size={32} color="green" />
-      <View style={styles.container}>
-        <Image style={{width:50, height:50}} source={require('./pair1.png')}/>
-        <Text>Benvenuti nel mondo della Fight ju jitsu! </Text>
-      </View> 
+            <AppNav/>
       </View>
     );
   }
