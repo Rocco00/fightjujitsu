@@ -17,7 +17,7 @@ class Foto extends React.Component{
                 {onegroup.map(function(foto){
                     console.log("text")
                     console.log("../add_foto/"+foto)
-                    const prova = "../add_foto/"+foto
+                    const prova = "https://s3.amazonaws.com/mv-earth/testing/"+foto
                     return <Image source = {{uri:prova}} style = {styles.immagine}/> 
                 })
                 }
