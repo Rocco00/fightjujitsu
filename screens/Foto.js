@@ -13,18 +13,17 @@ class Foto extends React.Component{
                     <Ionicons style={{marginLeft:10,marginTop:40}} name="md-menu" size={32} color="green" />
                 </TouchableOpacity>
                 <View style = {styles.box}>
-                <Image source = {require("../add_foto/"+"photo1.jpeg")} style = {styles.immagine}/>
-                {onegroup.map(function(foto){
-                    console.log("text")
-                    console.log("../add_foto/"+foto)
-                    const prova = "https://s3.amazonaws.com/mv-earth/testing/"+foto
-                    return <Image source = {{uri:prova}} style = {styles.immagine}/> 
-                })
-                }
-                    <Text>
-                        Foto
-                    </Text>
-                </View>
+                    <TouchableOpacity>
+                        <Text>
+                            Gruppo 1
+                        </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text>
+                            Gruppo 2
+                        </Text>
+                    </TouchableOpacity>
+            </View>
             </View>
         )
     }
