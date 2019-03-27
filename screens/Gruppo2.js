@@ -1,14 +1,14 @@
 import React from "react";
 import {View,Text,TouchableOpacity,Image,StyleSheet,ScrollView} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-class Gruppo1 extends React.Component {
-    render(){
+class Gruppo2 extends React.Component {
+    render (){
         const onegroup = ["photo1.jpeg","photo2.jpeg","photo3.jpeg","photo4.jpeg","photo5.jpg"];
-        const twogroup = ["settori.jpg"];
+        const twogroup =["settori.jpg"];
         return(
             <View style = {StyleSheet.grandebox}>
-                <ScrollView>
-                    {onegroup.map((foto,index)=>{
+            <ScrollView>
+                    {twogroup.map((foto,index)=>{
                         return (
                             <View style = {styles.box} key={index}>
                                 <Image source = {{uri:"https://s3.amazonaws.com/mv-earth/testing/"+foto}} style = {styles.immagine}/>
@@ -27,13 +27,11 @@ const styles = StyleSheet.create({
         alignItems:"center",
     },
     grandebox:{
-            flex:1,
+        flex:1,
     },
     immagine:{
         height:140,
         width:100,
     }
-
 })
-export default Gruppo1;
-
+export default Gruppo2;
