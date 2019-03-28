@@ -14,14 +14,14 @@ class Foto extends React.Component{
                     <Ionicons style={{marginLeft:10,marginTop:40}} name="md-menu" size={32} color="green" />
                 </TouchableOpacity>
                 <View style = {styles.box}>
-                    <TouchableOpacity onPress={()=>{
+                    <TouchableOpacity style = {styles.rettangolo} onPress={()=>{
                         this.props.navigation.navigate("Gruppo1")
                     }}>
                         <Text>
                             Gruppo 1
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={()=>{
+                    <TouchableOpacity style = {styles.rettangolo} onPress={()=>{
                         this.props.navigation.navigate("Gruppo2")
                     }}>
                         <Text>
@@ -47,6 +47,18 @@ const styles = StyleSheet.create({
     immagine:{
         height:140,
         width:100,
+    },
+    rettangolo:{
+        paddingBottom:20,
+        paddingTop:20,
+        paddingLeft:20,
+        paddingRight:20,
+        borderColor: "black",
+        borderWidth:1,
+        width:"100%",
+        marginBottom:30,
+        alignContent:"center",
+        alignItems:"center",
     }
 
 })
