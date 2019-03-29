@@ -1,6 +1,7 @@
 import React from "react";
 import {View,Text,TouchableOpacity,Image,StyleSheet} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
+import Gruppo1 from "./Gruppo1";
 class Foto extends React.Component{
         static navigationOptions = {header: null}
     render(){
