@@ -5,6 +5,8 @@ import Video from "./screens/Video";
 import News from "./screens/News";
 import Gruppo1 from "./screens/Gruppo1";
 import Gruppo2 from "./screens/Gruppo2";
+import Gruppo1Video from "./screens/Gruppo1Video";
+import Gruppo2Video from "./screens/Gruppo2Video";
 const fotoNavigation = createStackNavigator({
   Foto:{
     screen:Foto,
@@ -16,6 +18,17 @@ const fotoNavigation = createStackNavigator({
     screen:Gruppo2,
   },
 })
+const videoNavigation = createStackNavigator ({
+  Video:{
+    screen:Video,
+  },
+  Gruppo1Video:{
+    screen:Gruppo1Video,
+  },
+  Gruppo2Video:{
+    screen:Gruppo2Video,
+  },
+})
 const navigation = createDrawerNavigator({
   Home:{
     screen:Home,
@@ -24,7 +37,7 @@ const navigation = createDrawerNavigator({
     screen:fotoNavigation,
   },
   Video:{
-    screen:Video,
+    screen:videoNavigation,
   },
   News:{
     screen:News,
