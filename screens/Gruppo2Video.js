@@ -1,7 +1,8 @@
 import React from "react";
-import {View,Text,TouchableOpacity,Image,StyleSheet,ScrollView} from "react-native";
+import {View,Text,TouchableOpacity,Image,StyleSheet,ScrollView,} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import {db} from "../config";
+import {Video} from "expo";
 const videodb = db.ref ("video/gruppo2");
 class Gruppo2Video extends React.Component {
     constructor(props){
@@ -10,7 +11,7 @@ class Gruppo2Video extends React.Component {
     }
     componentDidMount () {
         videodb.on ("value", snapshot => {
-            let data = snapshot.val ();
+            let data = snapshot.val();
             this.setState ({
                 video:data
             })
@@ -20,13 +21,20 @@ class Gruppo2Video extends React.Component {
         return(
             <View style = {StyleSheet.grandebox}>
                 <ScrollView>
-                {this.state.foto.map((foto,index)=>{
-                            return (
-                                <View style = {styles.box} key={index}>
-                                    <Image source = {{uri:foto}} style = {styles.immagine}/>
-                                </View>
-                            )
-                        })}
+                    {this.state.video.map ((video,index)=>{
+                        return (
+                        <View style = {styles.box} key = {index}>
+                            <Video source = {{uri:video}} 
+                            rate = {1.0} 
+                            volume = {1.0} 
+                            isMuted = {false} 
+                            resizeMode = "contain"
+                            style = {{ width:300, height:300}} 
+                            useNativeControls
+                            />          
+                        </View>
+                        )
+                    })}
                 </ScrollView>
             </View>
         )
@@ -42,7 +50,7 @@ const styles = StyleSheet.create ({
     grandebox:{
         flex:1,
     },
-    immagine:{
+    video:{
         height:140,
         width:100,
     }

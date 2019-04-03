@@ -2,6 +2,7 @@ import React from "react";
 import {View,Text,TouchableOpacity,StyleSheet} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 class Video extends React.Component{
+    static navigationOptions = {header: null}
     render(){
         return(
         <View style ={styles.grandebox}>
@@ -12,14 +13,14 @@ class Video extends React.Component{
             </TouchableOpacity>
             <View style = {styles.box} >
                 <TouchableOpacity style = {styles.rettangolo} onPress={()=>{
-                        this.props.navigation.navigate("gruppo1video")
+                        this.props.navigation.navigate("Gruppo1Video")
                     }}>
                     <Text>
                     Gruppo1
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style = {styles.rettangolo} onPress={()=>{
-                        this.props.navigation.navigate("gruppo2video")
+                        this.props.navigation.navigate("Gruppo2Video")
                     }}>
                         <Text>
                             Gruppo 2
@@ -40,5 +41,18 @@ const styles = StyleSheet.create({
     grandebox:{
         flex:1,
     },
+    rettangolo:{
+        paddingBottom:20,
+        paddingTop:20,
+        paddingLeft:20,
+        paddingRight:20,
+        borderColor: "black",
+        borderWidth:1,
+        width:"100%",
+        marginBottom:30,
+        alignContent:"center",
+        alignItems:"center",
+    }
 })
 export default Video;
+
