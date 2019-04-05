@@ -20,13 +20,19 @@ class Gruppo1 extends React.Component {
         return(
             <View style = {StyleSheet.grandebox}>
                 <ScrollView>
+                    <View style = {styles.riga}>
                     {this.state.foto.map((foto,index)=>{
                         return (
                             <View style = {styles.box} key={index}>
-                                <Image source = {{uri:foto}} style = {styles.immagine}/>
+                            <TouchableOpacity onPress={()=>{
+                                this.props.navigation.navigate("Zoomfoto")
+                            }}>
+                            <Image source = {{uri:foto}} style = {styles.immagine}/>
+                            </TouchableOpacity>
                             </View>
                         )
                     })}
+                    </View>
                 </ScrollView>
             </View>
         )
@@ -44,7 +50,15 @@ const styles = StyleSheet.create({
     immagine:{
         height:140,
         width:100,
+    },
+    riga:{
+        flexDirection:"row",
+        flexWrap:"wrap",
+        justifyContent:"center",
+        alignContent:"center",
+        alignItems:"center",
     }
+
 
 })
 export default Gruppo1;

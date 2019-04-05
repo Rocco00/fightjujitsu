@@ -1,5 +1,5 @@
 import React from "react";
-import {View,Text,TouchableOpacity,StyleSheet} from "react-native";
+import {View,Text,TouchableOpacity,StyleSheet, WebView} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 class News extends React.Component{
     render(){
@@ -10,12 +10,8 @@ class News extends React.Component{
             }}>
                 <Ionicons style={{marginLeft:10,marginTop:40}} name="md-menu" size={32} color="green" />
             </TouchableOpacity>
-                <View style = {styles.box}>
-                <Text>
-                    News
-                </Text>
-                </View>
-            </View>
+                <WebView source  = {{uri:"http://m.italiajujitsu.it/1/news_4276687.html"}} style = {{flex:9 }}/>
+            </View> 
         )
     }
 }

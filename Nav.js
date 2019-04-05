@@ -7,6 +7,7 @@ import Gruppo1 from "./screens/Gruppo1";
 import Gruppo2 from "./screens/Gruppo2";
 import Gruppo1Video from "./screens/Gruppo1Video";
 import Gruppo2Video from "./screens/Gruppo2Video";
+import Zoomfoto from "./screens/Zoomfoto";
 const fotoNavigation = createStackNavigator({
   Foto:{
     screen:Foto,
@@ -16,6 +17,9 @@ const fotoNavigation = createStackNavigator({
   },
   Gruppo2:{
     screen:Gruppo2,
+  },
+  Zoomfoto:{
+    screen:Zoomfoto,
   },
 })
 const videoNavigation = createStackNavigator ({

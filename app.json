@@ -27,7 +27,7 @@
     },
     "android": {
       "package": "com.rocco.fightjujitsu",
-      "versionCode":1
+      "versionCode":2
     }
   }
 }
