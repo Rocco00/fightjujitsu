@@ -16,14 +16,14 @@ class Video extends React.Component{
                         this.props.navigation.navigate("Gruppo1Video")
                     }}>
                     <Text>
-                    Gruppo1
+                        FIGHT
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style = {styles.rettangolo} onPress={()=>{
                         this.props.navigation.navigate("Gruppo2Video")
                     }}>
                         <Text>
-                            Gruppo 2
+                            TECNICHE
                         </Text>
                     </TouchableOpacity>
             </View>

@@ -19,14 +19,14 @@ class Foto extends React.Component{
                         this.props.navigation.navigate("Gruppo1")
                     }}>
                         <Text>
-                            Gruppo 1
+                            PALESTRA
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style = {styles.rettangolo} onPress={()=>{
                         this.props.navigation.navigate("Gruppo2")
                     }}>
                         <Text>
-                            Gruppo 2
+                            TECNICHE
                         </Text>
                     </TouchableOpacity>
             </View>

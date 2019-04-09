@@ -25,7 +25,7 @@ class Gruppo1 extends React.Component {
                         return (
                             <View style = {styles.box} key={index}>
                             <TouchableOpacity onPress={()=>{
-                                this.props.navigation.navigate("Zoomfoto")
+                                this.props.navigation.navigate("Zoomfoto",{apertura:foto})
                             }}>
                             <Image source = {{uri:foto}} style = {styles.immagine}/>
                             </TouchableOpacity>
@@ -43,6 +43,8 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignContent:"center",
         alignItems:"center",
+        paddingRight:10,
+        paddingLeft:10,
     },
     grandebox:{
             flex:1,
@@ -58,8 +60,5 @@ const styles = StyleSheet.create({
         alignContent:"center",
         alignItems:"center",
     }
-
-
 })
 export default Gruppo1;
-

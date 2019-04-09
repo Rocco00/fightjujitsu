@@ -11,9 +11,9 @@ class Home extends React.Component{
                     <Ionicons style={{marginLeft:10,marginTop:40}} name="md-menu" size={32} color="green" />
                 </TouchableOpacity>
                 <View style = {styles.box}>
-                    <Image source = {require("../pair1.png")} style = {styles.principale}/>
+                    <Image source = {require("../pair1.jpeg")} style = {styles.principale} resizeMode = "contain" />
                     <Text style = {styles.scrittura}>
-                        Benvenuti nel mondo del Fight JuJitsu
+                        Benvenuti nella nostra palestra "Fit-Jitsu"
                     </Text>
                 </View>
             </View>
@@ -22,8 +22,8 @@ class Home extends React.Component{
 }
 const styles = StyleSheet.create({
     principale: {
-        width:100, 
-        height:150,
+        width:"90%", 
+        height:"50%",
     },
     box:{
         flex:9,
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     },
     scrittura:{
         fontSize:25,
+        textAlign:"center",
     }
 })
 export default Home;
